@@ -5,6 +5,34 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.hiddenmenu {
+    width: 50%;
+    position: absolute;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+    right: -50%;
+    transition: all 0.5s ease;
+}
+
+.hiddenmenu ul {
+    list-style: none;
+}
+
+.hiddenmenu ul li {
+    padding: 1vw 0;
+}
+
+.hiddenmenu ul li a {
+    text-decoration: none;
+    color: #111;
+    transition: all 0.5s ease;
+}
+
+nav ul li a:hover {
+    color: #479CD5;
+}
+
 
 /*utility */
 
@@ -19,6 +47,21 @@ body {
     padding: 1vw 8vw;
 }
 
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
 .grid-4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -29,11 +72,8 @@ body {
 
 /*Navigation bar*/
 
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.mane {
+    display: none;
 }
 
 nav img {
@@ -54,11 +94,17 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #111;
+    transition: all 0.5s ease;
+}
+
+nav ul li a:hover {
+    color: #479CD5;
 }
 
 nav .bots {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
 }
 
 nav .bots button {
@@ -79,34 +125,46 @@ nav .bots button:last-child {
 /* Header  */
 
 header {
-    height: 90vh;
-    /* background-image: url('img/bg.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
     background-color: #479CD5;
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+}
+
+header .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 header .text h1 {
-    font-size: 3.5em;
-    width: 90%;
+    font-size: 3em;
     color: #fff;
+}
+
+header .text .special {
+    color: #222;
 }
 
 header .text p {
-    font-size: 1.5em;
+    font-size: 1.3em;
     opacity: 0.8;
-    width: 90%;
+    width: 100%;
     color: #fff;
 }
 
+header .text .search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 header .text .search input:first-child {
-    padding: 1.5vw 1vw;
-    width: 50%;
-    border-radius: 16px;
-    background-color: #E5E5E5;
+    padding: 1.0vw 1vw;
+    width: 60%;
+    border-radius: 5px;
+    background-color: #fff;
     border: none;
-    color: #fff;
 }
 
 header .text .search input:last-child {
@@ -114,31 +172,39 @@ header .text .search input:last-child {
     padding: 0.8vw 1vw;
     background-color: #111226;
     color: #fff;
+    font-size: 1.1em;
+    transition: all 0.5s ease;
+}
+
+header .text .search input:last-child:hover {
+    background-color: #fff;
+    color: #111226;
+}
+
+header .img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 header .img img {
-    width: 600px;
-    position: relative;
-    bottom: -20px;
-    right: 0;
+    width: 90%;
 }
 
 
 /* services */
 
 .services .text {
-    width: 90%;
+    width: 100%;
 }
 
 .services .text h2 {
     font-size: 2.5em;
-    width: 80%;
 }
 
 .services .text p {
     font-size: 1.2em;
     opacity: 0.8;
-    width: 80%;
 }
 
 .services .text button {
@@ -147,13 +213,16 @@ header .img img {
     padding: 0.8vw 1vw;
     background-color: #111226;
     color: #fff;
+    transition: all 0.5s ease;
+}
+
+.services .text button:hover {
+    background-color: #fff;
+    color: #111226;
 }
 
 .services .cards {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 30px;
-    width: 80%;
+    justify-self: end;
 }
 
 .services .cards .card {
@@ -270,10 +339,17 @@ header .img img {
     margin-top: 10px;
     width: 50%;
     border-radius: 10px;
+    font-size: 1.2em;
     padding: 0.8vw 1vw;
     background-color: #479CD5;
     color: #fff;
-    border: none;
+    border: 1px solid #479CD5;
+    transition: all 0.5s ease;
+}
+
+.contactUs .contaner .text-fied button:hover {
+    background-color: #fff;
+    color: #479CD5;
 }
 
 .contactUs .contaner .map-cont img {
