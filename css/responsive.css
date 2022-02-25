@@ -135,10 +135,10 @@
         grid-template-columns: 1fr 1fr;
     }
     .courses .card h2 {
-        font-size: 2em;
+        font-size: 1em;
     }
     .courses .card p {
-        font-size: 1em;
+        font-size: 0.8em;
     }
     .courses .card button {
         padding: 0.8vw 1vw;
@@ -210,5 +210,8 @@
     }
     header .img img {
         width: 90%;
+    }
+    .courses .cards {
+        grid-template-columns: 1fr 1fr;
     }
 }
