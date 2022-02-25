@@ -77,9 +77,6 @@
     .bots button {
         display: none;
     }
-    .pad {
-        padding: 1vw 3vw;
-    }
     header .text h1 {
         font-size: 1.5em;
     }
@@ -199,7 +196,7 @@
         padding: 0.5vw;
     }
     .pad {
-        padding: 1vw 5vw;
+        padding: 1vw 2vw;
     }
     header .text h1 {
         font-size: 2em;
